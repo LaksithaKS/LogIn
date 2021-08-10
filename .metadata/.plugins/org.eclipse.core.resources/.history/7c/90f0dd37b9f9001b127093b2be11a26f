@@ -1,0 +1,7 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/login
+spring.datasource.username=root
+spring.datasource.password=supun
+spring.jpa.generate-ddl=true
+
+#jwt.secret=javainuse
+jwt.get.token.uri=/authenticate

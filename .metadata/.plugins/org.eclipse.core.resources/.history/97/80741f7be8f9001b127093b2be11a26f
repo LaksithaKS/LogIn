@@ -1,0 +1,30 @@
+package com.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.model.User;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, String> {
+	
+	User findByUserId(String userId);
+
+//	@Query(value = "select max(cast(user_id as unsigned))+1 from user;", nativeQuery = true)
+//	int getUserLastNo();
+//
+//	@Query(value = "SELECT * FROM user where reset_password_token = :token", nativeQuery = true)
+//	User findByResetPasswordToken(@Param("token") String token);
+//
+	User findByUname(String uname);
+//
+//	
+//	@Transactional
+//	@Modifying
+//	@Query(value="update user set password = :encodedPassword,reset_password_token=null where user_id = :userId",nativeQuery=true)
+//	void updatePassword(@Param("encodedPassword") String encodedPassword,@Param("userId") String userId);
+}

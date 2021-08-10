@@ -1,0 +1,19 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.model.user;
+import com.repository.userRepository;
+
+public class userService {
+	
+	@Autowired
+	userRepository userRepository;
+	
+	public Optional<user> getUserById(String id) {
+		Optional<user> finduserById = userRepository.findById(id);
+		return finduserById;
+	}
+}

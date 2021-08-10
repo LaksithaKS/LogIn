@@ -1,0 +1,67 @@
+package com.itfac.amc.service;
+
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+import java.util.Optional;
+import java.util.Random;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import com.itfac.amc.entity.User;
+
+
+public interface UserService {
+//	Optional<User> getUserById(String id);
+//
+//	void deleteUser(String id);
+//
+//	public User getUser(String userId);
+//
+//	public ResponseEntity<String> updateUser(String userId, User user);
+//
+//	public Boolean updatePassword(String current_password,String userId, User user);
+//
+//	List<User> getAllUser();
+//
+//	void sendEmail(String recipientEmail, String link) throws MessagingException, UnsupportedEncodingException;
+//
+//	User getByResetPasswordToken(String token);
+//
+//	void updatePassword(User user, String newPassword);
+//
+//	User getByUserName(User user);
+//
+//	void updateUser(User user, String userId);
+//
+//	User addUser(User user, HttpServletRequest httpServletRequest);
+
+	//--------------------------------------------------------------
+
+
+	public Optional<User> getUserById(String id);
+
+	public void deleteUser(String id);
+
+	public void updateUser(User user, String userId);
+
+	public User getUser(String userId);
+
+	public Boolean updatePassword(String current_password,String userId,User user);
+
+
+	public void sendEmail(String recipientEmail, String link) throws MessagingException, UnsupportedEncodingException;
+
+	public User getByUserName(User user);
+
+	
+	public User getByResetPasswordToken(String token);
+
+
+	public void updatePassword(User user, String newPassword);
+}

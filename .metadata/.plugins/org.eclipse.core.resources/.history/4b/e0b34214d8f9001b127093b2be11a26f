@@ -1,0 +1,35 @@
+
+file.storage.location=src//main//resources//fileStorage//scanned copies
+
+spring.jpa.show-sql= true
+spring.jpa.hibernate.ddl-auto= update
+spring.jpa.generate-ddl=true
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+spring.servlet.multipart.enabled=true
+spring.servlet.multipart.location=temp123
+spring.servlet.multipart.file-size-threshold=5MB
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=20MB
+
+jwt.expiration-time=6000000
+jwt.secret-key=epic_lanka_amc
+
+spring.mail.host=smtp.gmail.com
+spring.mail.username=amcrevenu@gmail.com
+spring.mail.password=viudnmzqeyoglsuy
+spring.mail.port=587
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+
+image_path=C:\\Users\\User\\Desktop\\New folder
+report_path=C:\\Users\\User\\Desktop\\New folder\\
+jr_location_path=src/main/resources/jasperReports/
+
+spring.profiles.active=local
+
+blob.connection-string=DefaultEndpointsProtocol=https;AccountName=myamc;AccountKey=UR3TeVk5dzMrxdBn/1KMoIpugVtLYczpEE6NOAnza48qeoMOyDqy1VFw3fK/XGbQ8kbiobVXsQ/2NWlbYE1Gvg==;EndpointSuffix=core.windows.net
+blob.container-name=amcfiles
+
