@@ -42,7 +42,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable()
 			.authorizeRequests()
-			.antMatchers("/User/alluser").permitAll()
+			.antMatchers("/User/alluser").hasRole("ADMIN")
 			.antMatchers("/User/**").authenticated()
 			.antMatchers("/notification/**").authenticated()
 			.antMatchers("/authenticate").permitAll()
@@ -58,5 +58,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	public BCryptPasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+	
 	
 }
